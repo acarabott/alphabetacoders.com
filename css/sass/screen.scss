@@ -5,11 +5,14 @@
 
 // @import "compass/reset";
 
-
-h1, h2, h3, h4, h5, h6 {
-	font-weight:bold;
-}
-
 emph {
 	font-style:italic;
+}
+
+h1 {
+	text-align:center;
+}
+
+#ninjas {
+	text-align:center;
 }
