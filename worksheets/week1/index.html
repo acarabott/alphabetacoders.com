@@ -121,7 +121,7 @@ body{font-size:16px;}
   h2, h3 { page-break-after: avoid; }
 }
 </style><title>processing-week1</title></head><body><h1 id="processing-week-1">Processing - Week 1</h1>
-<h2 id="example-2-1">Example 2-1</h2>
+<h2 id="1-drawing-an-ellipse">1 - Drawing an Ellipse</h2>
 <p>In the editor, type the following:</p>
 <pre><code>ellipse(50, 50, 80, 80);
 </code></pre>
@@ -129,7 +129,7 @@ body{font-size:16px;}
 <ul>
 <li>Alter the values and watch it change, what does each parameter do?</li>
 </ul>
-<h2 id="example-2-2">Example 2-2</h2>
+<h2 id="2-make-circles">2 - Make Circles</h2>
 <p>Delete the text from the last example, and try this one:</p>
 <pre><code>void setup() {
     size(480, 120);
@@ -149,7 +149,62 @@ void draw() {
 <ul>
 <li>Make the canvas bigger</li>
 <li>Have it draw two circles, side by side</li>
+<li>What about 4 circles?</li>
 </ul>
-<h2 id="example-3-1">Example 3-1</h2>
-<h3 id="credits">Credits</h3>
+<h2 id="3-setting-the-window-size">3 - Setting the window size</h2>
+<p>The <code>size()</code> function sets the size of our canvas, the parameters, or arguments are in pixels</p>
+<pre><code>size(480, 480);
+</code></pre>
+<h2 id="4-more-shapes">4 - More Shapes</h2>
+<p>After you <code>size(480, 480);</code> function try some of these other functions</p>
+<h3 id="point">Point</h3>
+<p>Arguments: <em>(x, y)</em></p>
+<pre><code>point(240, 240);
+</code></pre>
+<h3 id="line">Line</h3>
+<p>Arguments: <em>(x1, y1, x2, y2)</em></p>
+<p>The x and y position of the two ends of the line</p>
+<pre><code>line(20, 50, 400, 400);
+</code></pre>
+<p><img alt="line" src="/worksheets/week1/images/line.png" /></p>
+<h3 id="triangle">Triangle</h3>
+<p>Arguments: <em>(x1, y1, x2, y2, x3, y3)</em></p>
+<p>The x and y positions of each of the triangle's points</p>
+<pre><code>triangle(240, 0, 0, 240, 240, 240);
+</code></pre>
+<p><img alt="triangle" src="/worksheets/week1/images/triangle.png" /></p>
+<h3 id="quad">Quad</h3>
+<p>Arguments: <em>(x1, y1, x2, y2, x3, y3, x4, y4)</em></p>
+<p>The x and y positions of each corner of the quad</p>
+<pre><code>quad(20, 20, 460, 20, 460, 460, 460, 20);
+</code></pre>
+<p><img alt="quad" src="/worksheets/week1/images/quad.png" /></p>
+<h3 id="rect">Rect</h3>
+<p>Arguments: <em>(x, y, width, height)</em>    </p>
+<pre><code>rect(20, 20, 440, 440);
+</code></pre>
+<p><img alt="rect" src="/worksheets/week1/images/rect.png" /></p>
+<h3 id="ellipse">Ellipse</h3>
+<p>Arguments: <em>(x, y, width, height)</em></p>
+<pre><code>ellipse(240, 240, 100, 100);
+</code></pre>
+<p><img alt="ellipse" src="/worksheets/week1/images/ellipse.png" /></p>
+<h3 id="arc">Arc</h3>
+<p>Arguments: <em>(x, y, width, height, start, stop)</em></p>
+<pre><code>arc(240, 240, 100, 100, HALF_PI, PI + HALF_PI);
+</code></pre>
+<p><em>Start and Stop</em> are the degrees in <em>Radians</em> (angle measurements based on pi (3.14159) rather than degrees). Processing comes with some constant values (words that are all uppercase) to make life easier.</p>
+<p>If you think of it like a clock:</p>
+<ul>
+<li>0 = 3 o'clock</li>
+<li>HALF_PI = 6 o'clock</li>
+<li>PI = 9 o'clock</li>
+<li>PI + HALF_PI = 12 o'clock</li>
+<li>TWO_PI = 3 o'clock (again)</li>
+</ul>
+<p>These constants are just numbers, so you can do PI * 2, or HALF_PI / 2</p>
+<p><img alt="Radians" src="/worksheets/week1/images/radians.png" /></p>
+<h2 id="play-time">Play time</h2>
+<p>Combine some shape functions, along with the <code>mouseX</code> and <code>mouseY</code> values to make something strange, or a monster, or an abstract piece of art.</p>
+<h4 id="credits">Credits</h4>
 <p>Examples based on <em>Getting Started with Processing</em> by Casey Reas and Ben Fry</p></body></html>
