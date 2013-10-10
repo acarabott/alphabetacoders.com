@@ -1,0 +1,236 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>week3</title></head><body><h1 id="processing-week-3">Processing - Week 3</h1>
+<h2 id="functions">Functions</h2>
+<p>We have used many of Processing's built in functions, such as <code>ellipse</code>, <code>rect</code> and <code>fill</code>.</p>
+<p>You can recognise a function <em>call</em> or <em>execution</em> because it is an word followied by parentheses (round brackets). There can be values inside the parentheses (called arguments) or no values at all e.g.</p>
+<pre><code>// The value of 20 is passed to the function
+strokeWeight(20);
+
+// No values are passed
+noStroke();
+</code></pre>
+<p>We can write our own functions, this is useful for many reasons which we will see. Here is a function that does nothing called doNothing.</p>
+<pre><code>void doNothing() {
+    // This is where code would go
+}
+</code></pre>
+<p>Let's make a function that actually does something....</p>
+<h2 id="task-pizza-function">Task: Pizza Function</h2>
+<p>We are going to write a function that will draw our slice of pizza from last week, to do this we can copy paste our pizza code into a new function. Our code should now look like this:</p>
+<pre><code>void setup() {
+    size(480, 480);
+}
+
+void draw() {
+    // Pizza code removed from here
+}
+
+void pizza() {
+    // Pizza code pasted here
+    fill(243, 240, 35);
+
+    stroke(212, 125, 49);
+    strokeWeight(20);
+
+    arc(240, 240, 400, 400, radians(250), radians(320));
+    fill(200, 40, 40);
+
+    noStroke();
+    strokeWeight(2);
+    ellipse(270, 80, 40, 40);
+    ellipse(270, 130, 30, 30);
+    ellipse(220, 100, 30, 30);
+}
+</code></pre>
+<p>Now to draw our pizza we need to call our <code>pizza</code> function, we do this just as we would draw any other shape; in our draw function.</p>
+<pre><code>void draw() {
+    pizza();
+}
+</code></pre>
+<h3 id="why">Why?</h3>
+<blockquote>
+<p>"Sensei, why is this useful? It looks the same as before, you have taught us nothing."</p>
+</blockquote>
+<h3 id="because-many">Because many</h3>
+<p>Now that we can draw a slice of pizza just by typing <code>pizza()</code> we can draw ALL THE PIZZAS! Try typing <code>pizza();</code> twice, just as you would with two <code>ellipse</code>s</p>
+<pre><code>pizza();
+pizza();
+</code></pre>
+<h3 id="still-same">Still same</h3>
+<blockquote>
+<p>"Sensei, it is still the same, you have still taught us nothing"</p>
+</blockquote>
+<h3 id="because-same">Because same</h3>
+<blockquote>
+<p>All anyone can teach you is nothing, they can only show you the way, you must learn for yourself</p>
+</blockquote>
+<p>It looks the same because our two slices of pizza are in exactly the same position, what we need to do is be able to make pizza slices with different <code>x</code> and <code>y</code> values, just like we do with other shapes.</p>
+<h2 id="parameters">Parameters</h2>
+<p>When we draw an <code>ellipse</code> we pass it four values: <code>x</code>, <code>y</code>, <code>width</code>, <code>height</code> </p>
+<pre><code>ellipse(50, 100, 150, 150);
+</code></pre>
+<p>We need to change our <code>pizza</code> function so that it accepts <code>x</code> and <code>y</code> values, we do this by adding parameters.</p>
+<pre><code>pizza() {
+    // code...
+}
+</code></pre>
+<p><strong>Becomes</strong></p>
+<pre><code>pizza(int x, int y) {
+    // code
+}
+</code></pre>
+<p>The word <code>int</code> before <code>x</code> and <code>y</code> is the <em>type</em> of the value that will be passed to the function.</p>
+<p>We are going to be passing Integers (whole numbers) because we are dealing with pixels, so we use the type <code>int</code>. </p>
+<p>Our pizza function now has two parameters: <code>x</code> and <code>y</code>. The values that are passed in are called <em>arguments</em>, so we would say "Use the <code>x</code> argument for the <code>x</code> position of our arc"</p>
+<h3 id="using-parameters">Using parameters</h3>
+<p>We now need to use this in our pizza code, start by replacing the <code>x</code> and <code>y</code> values used in <code>arc</code> with the arguments <code>x</code> and <code>y</code>.</p>
+<pre><code>arc(x, y, 400, 400, radians(250), radians(320));
+</code></pre>
+<h2 id="many-pizzas">Many Pizzas</h2>
+<p>Now call your pizza function twice, passing in different values for <code>x</code> and <code>y</code></p>
+<pre><code>void draw() {
+    pizza(50, 200);
+    pizza(200, 200);
+}
+</code></pre>
+<p>TWO (badly teleported) PIZZAS!</p>
+<h3 id="moving-the-pepperoni">Moving the pepperoni</h3>
+<p>If we want our pepperoni to move with our pizza (and we do) we are going to have to use our <code>x</code> and <code>y</code> arguments on our pepperoni <code>ellipse</code>s as well. Try this and see what goes wrong....</p>
+<p>Now fix it!</p>
+<h2 id="task-width-and-height">Task: Width and Height</h2>
+<p>Add <code>w</code> and <code>h</code> parameters to your <code>pizza</code> function, which influence the width and height of your pizza slice AND pepperoni.</p>
+<p><em>Protip:</em> Your pepperoni need to be proportional to your pizza slice, a percentage of its size. The easiest way to do this is to multiply by a decimal:</p>
+<pre><code>w * 0.5; // 50%
+</code></pre>
+<blockquote>
+<p>Sensei, why not divide by 2?</p>
+</blockquote>
+<pre><code>w / 2; // also 50%
+</code></pre>
+<p>Well, sure, everyone knows that to make something 50% of the size you can divide by 2, but what if you want it to be 7.25% of the size? Then you need to divide by 13.79310345</p>
+<p>It is much easier (for your poor brain) to do</p>
+<pre><code>w * 0.0725;
+</code></pre>
+<h3 id="bonus-tasks-strokeweight">Bonus Tasks: strokeWeight</h3>
+<p>Make the stroke weight of your crust adjust according to the surface area of your pizza slice (oooh, fancy).</p></body></html>
