@@ -5,14 +5,22 @@
 
 // @import "compass/reset";
 
+.container.theme-showcase {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
 emph {
 	font-style:italic;
 }
 
-h1 {
+header {
 	text-align:center;
 }
-
+a:hover {
+	text-decoration:none;
+}
 #ninjas {
 	text-align:center;
 }
+

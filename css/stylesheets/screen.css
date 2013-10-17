@@ -3,16 +3,27 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 8, ../sass/screen.scss */
+.container.theme-showcase {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 13, ../sass/screen.scss */
 emph {
   font-style: italic;
 }
 
-/* line 12, ../sass/screen.scss */
-h1 {
+/* line 17, ../sass/screen.scss */
+header {
   text-align: center;
 }
 
-/* line 16, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 23, ../sass/screen.scss */
 #ninjas {
   text-align: center;
 }

@@ -22,91 +22,86 @@
     <![endif]-->
   </head>
   <body>
-    <!-- Fixed navbar -->
-       <div class="navbar navbar-inverse navbar-fixed-top">
-         <div class="container">
-           <div class="active navbar-header">
-             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-             </button>
-             <a class="navbar-brand" href="/">AlphaBetaCoders</a>
-           </div>
-           <div class="navbar-collapse collapse">
-             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class="dropdown">
-                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
-                 <ul class="dropdown-menu">
-                   <li><a href="http://clsb.sketchpad.cc/" target="_blank">Sketchpad - ask your sensei to create an account for you!</a></li>
-                   <li class="divider"></li>
-                   <li><a href="http://processing.org/reference/" target="_blank">Processing Language Reference</a></li>
-                   <li><a href="http://processing.org/tutorials/" target="_blank">Processing Tutorials</a></li>
-                 </ul>
-               </li>
-               <li><a href="worksheets">Worksheets</a></li>
-               <li><a href="#contact">Contact</a></li>
-             </ul>
-           </div><!--/.nav-collapse -->
-         </div>
-       </div>
-
     <div class="container theme-showcase">
+        <header>
+            <div class="jumbotron">
+                <h1><a href="/">AlphaBetaCoders</a></h1>
+                <h2>Home</h2>
+            </div>
+        </header>
+
+        <div class="page-header"><h2>Tools</h2></div>
         <div class="jumbotron">
-            <h1>AlphaBetaCoders</h1>
+            <ul>
+                <li>
+                    <a href="http://clsb.sketchpad.cc/" target="_blank">Sketchpad</a>
+                    <p>If you don't have an account ask your sensei to create one for you!</p>
+                </li>
+                <li><a href="Worksheets">Worksheets</a></li>
+                <li>
+                    <a href="http://processing.org/reference/" target="_blank">
+                        Processing Language Reference
+                    </a>
+                </li>
+            </ul>
         </div>
 
+        <div class="page-header"><h2>Class Structure</h2></div>
+        <div class="jumbotron">
+            Sessions are held on <strong>Thursdays</strong> in <strong>W4</strong>
+            <ul>
+                <li>Lunchtime <strong>(1-2pm)</strong> is a catch up session</li>
+                <li>After school <strong>(4-5pm)</strong> is a workshop where new material will be introduced.</li>
+            </ul>
+            <p>If you aren't up to date, try to complete the <a href="worksheets">worksheets</a> at lunch times and at home.</p>
+            <p><emph>You can do come along after school to catchup, but your sensei will be focused on running the workshop.</emph></p>
+        </div>
         <div class="page-header"><h2>Your goal</h2></div>
-        <p>
-            To become a l33t codeNinja, by learning <a href="http://processing.org/">Processing </a>
-        </p>
+        <div class="jumbotron">
+            <p>
+                To become a l33t codeNinja, by learning <a href="http://processing.org/">Processing </a>
+            </p>
+        </div>
 
         <div class="page-header"><h3>Why Processing?</h3></div>
-        <ul>
-            <li>
-                <p>
-                    <emph>"Processing offers a way to learn programming through creating interactive graphics."</emph> - <emph>Getting Started with Processing</emph> by Casey Reas and Ben Fry (creators of Processing)
-                </p>
-                <p>
-                    "Interactive graphics" is a catch all term for games / art / visualisations.
-                </p>
-                <p>
-                    Later in the year we will start integrating sound into your sketches.
-                </p>
-            </li>
-            <li>
-                <p>
-                    With Processing you will be able to write apps that run on:
-                    <ul>
-                        <li>Mac OS X</li>
-                        <li>Windows</li>
-                        <li>Linux</li>
-                        <li>Android</li>
-                        <li>Browsers (via processing.js)</li>
-                        <li>iOS (via processing.js)</li>
-                    </ul>
-                </p>
-            </li>
-            <li>
-                There are thousands of Processing examples online for you to learn from.
-            </li>
-        </ul>
-
-        <div class="page-header"><h2>How you will be trained by your Sensei</h2></div>
-        <p>
-            We will be working through the examples from <emph>Getting Started with Processing</emph> in an interactive manner, discussing our work as we go.
-        </p>
-        <p>
-            <strong>To become a truly strong codeNinja you should experiment with the examples, breaking and re-inventing them!</strong>
-        </p>
-        <p>
-            After each session the examples will be written up and made available <a href="worksheets">here</a> so you can review them later.
-        </p>
+        <div class="jumbotron" style="font-size:16px;">
+            <ul>
+                <li>
+                    <p>
+                        <emph>"Processing offers a way to learn programming through creating interactive graphics."</emph>
+                        <p> - <emph>Getting Started with Processing</emph> by Casey Reas and Ben Fry (creators of Processing)</p>
+                    </p>
+                    <p>
+                        "Interactive graphics" is a catch all term for games / art / visualisations.
+                    </p>
+                    <p>
+                        Later in the year we will start integrating sound into your sketches.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        With Processing you will be able to write apps that run on:
+                        <ul>
+                            <li>Mac OS X</li>
+                            <li>Windows</li>
+                            <li>Linux</li>
+                            <li>Android</li>
+                            <li>Browsers (via processing.js)</li>
+                            <li>iOS (via processing.js)</li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    There are thousands of Processing examples online for you to learn from.
+                </li>
+            </ul>
+        </div>
 
         <section id="contact">
             <div class="page-header"><h2>Contact</h2></div>
-            If you have any questions you can contact sensei [at] alphabetacoders [dot] com
+            <div class="jumbotron">
+                <p>If you have any questions you can contact sensei [at] alphabetacoders [dot] com</p>
+            </div>
         </section>
 
         <section id="ninjas">
