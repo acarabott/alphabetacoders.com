@@ -1,0 +1,240 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; text-align:center;}
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+date {text-align:center;}
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp {
+  color: #000;
+  font-family: monospace;
+  font-size: 0.88em;
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>week5</title></head><body><h1 id="processing-week-5">Processing - Week 5</h1>
+<h2 id="custom-shapes-vertex">Custom Shapes - Vertex</h2>
+<p>As well as using predefined shape functions such as <code>elipse</code> and <code>rect</code>, we can draw shapes using a series of points with <code>beginShape</code>, <code>vertex</code> and <code>endShape</code>.</p>
+<pre><code>void setup() {
+    size(480, 480);
+}
+
+void draw() {
+    beginShape();
+    vertex(180, 82);
+    vertex(207, 36);
+    vertex(214, 63);
+    vertex(407, 11);
+    vertex(412, 30);
+    vertex(219, 83);
+    vertex(226, 109);
+    endShape();
+}
+</code></pre>
+<p>Notice that the first and last points are not connected, to do this we change <code>endShape();</code> to <code>endShape(CLOSE);</code></p>
+<h3 id="your-own-shape">Your own shape</h3>
+<p>Pick a simple shape and try to draw it using <code>vertex</code>, things with straight lines will be the easiest.</p>
+<p>Ideas
+    * A robot head, in profile
+    * Tetris blocks
+    * Witches Hat</p>
+<h3 id="creature-example">Creature Example</h3>
+<pre><code>void setup() {
+    size(480, 120);
+}
+
+void draw() {
+    // Left creature
+    fill(255);
+    beginShape();
+    vertex(50, 120);
+    vertex(100, 90);
+    vertex(110, 60);
+    vertex(80, 20);
+    vertex(210, 60);
+    vertex(160, 80);
+    vertex(200, 90);
+    vertex(140, 100);
+    vertex(130, 120);
+    endShape();
+    fill(0);
+    ellipse(155, 60, 8, 8);
+
+    // Right creature
+    fill(255);
+    beginShape();
+    vertex(370, 120);
+    vertex(360, 90);
+    vertex(290, 80);
+    vertex(340, 70);
+    vertex(280, 50);
+    vertex(420, 10);
+    vertex(390, 50);
+    vertex(410, 90);
+    vertex(460, 120);
+    endShape();
+    fill(0);
+    ellipse(345, 50, 10, 10);
+}
+</code></pre>
+<h2 id="robot">Robot</h2>
+<p>Here's an example of a more involved drawing</p>
+<p><img alt="Robot" src="/worksheets/week5/images/robot.png" />    </p>
+<pre><code>void setup() {  // this is run once.   
+    size(720, 480);
+    smooth();
+    strokeWeight(2);
+    ellipseMode(RADIUS);
+}
+
+void draw() {  // this is run repeatedly.
+
+    // Neck
+    stroke(102);                    // Set stroke to gray
+    line(266, 257, 266, 162);        // Left
+    line(276, 257, 276, 162);       // Middle
+    line(286, 257, 286, 162);       // Right
+
+    // Antennae
+    line(276, 155, 246, 112);
+    line(276, 155, 306, 56);
+    line(276, 155, 342, 170);
+
+    // Body
+    noStroke();
+    fill(102);
+    ellipse(264, 377, 33, 33);
+    fill(0);
+    rect(219, 257, 90, 120);
+    fill(102);
+    rect(219, 274, 90, 6);
+
+    // Head
+    fill(0);
+    ellipse(276, 155, 45, 45);
+    fill(255);
+    ellipse(288, 150, 14, 14);
+    fill(0);
+    ellipse(288, 150, 3, 3);
+    fill(153);
+    ellipse(263, 148, 5, 5);
+    ellipse(296, 130, 4, 4);
+    ellipse(305, 162, 3, 3);
+}
+</code></pre>
+<h3 id="make-it-your-own">Make it your own</h3>
+<p>Now alter this sketch to make it your own.</p>
+<p>Ideas:
+<em> Make the robot move left and right with the mouse
+</em> Make the robot's colours change over time
+* Make the robot grow and shrink according to the mouse position</p></body></html>
