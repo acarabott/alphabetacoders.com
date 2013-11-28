@@ -32,13 +32,15 @@ The arguments for line are the co-ordinates of the two points/ends of the lines:
 
 So we get this
 
-![](images/lines1.png)
+
+
+![](/worksheets/week6/images/lines1.png)
 
 ## Fanning the lines
 
 Now your goal is to fan the lines out, so they aren't all parallel, like this:
 
-![](images/lines2.png)
+![](/worksheets/week6/images/lines2.png)
 
 Some hints:
 
@@ -53,7 +55,7 @@ Some hints:
 
 Now add a kink to the lines to achieve this:
 
-![](images/lines3.png)
+![](/worksheets/week6/images/lines3.png)
 
 You actually achieve this by drawing a second line, but what should the arguments be?
 
