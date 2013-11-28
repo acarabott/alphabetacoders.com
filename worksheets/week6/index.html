@@ -1,0 +1,188 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>week6</title></head><body><h1 id="processing-week-6">Processing - Week 6</h1>
+<h2 id="loops-and-lines">Loops and lines</h2>
+<p>Let's revisit <code>for</code> loops, this time to draw sets of lines.</p>
+<pre><code>void setup() {
+    size(480, 480);
+    strokeWeight(2);
+}
+
+void draw() {
+    for (int i = 20; i &lt; 400; i += 8) {
+        line(i, 40, i + 60, 80);
+    }
+}
+</code></pre>
+<h3 id="this-loop">This loop</h3>
+<ul>
+<li>Uses a counter that starts at 20 <code>int i = 20;</code></li>
+<li>Continues as long as the counter is under 400 <code>i &lt; 400;</code></li>
+<li>Increases by 8 after each loop <code>i+=8</code></li>
+</ul>
+<h3 id="the-lines">The lines</h3>
+<p>The arguments for line are the co-ordinates of the two points/ends of the lines: <code>line(x1, y1, x2, y2)</code></p>
+<ul>
+<li>The x1 value uses the counter value: <code>i</code></li>
+<li>The y1 value stays constant at <code>40</code></li>
+<li>The x2 value uses the counter value <code>+ 60</code>, so it is always 60 pixels to the right of <code>x1</code>.</li>
+<li>The y2 value stays constant at <code>80</code>, so 40 pixels lower than where the line started</li>
+</ul>
+<p>So we get this</p>
+<p><img alt="" src="file:///Volumes/Data/Users/arthurc/Sites/alphabetacoders.com/worksheets/week6/images/lines1.png" /></p>
+<h2 id="fanning-the-lines">Fanning the lines</h2>
+<p>Now your goal is to fan the lines out, so they aren't all parallel, like this:</p>
+<p><img alt="" src="file:///Volumes/Data/Users/arthurc/Sites/alphabetacoders.com/worksheets/week6/images/lines2.png" /></p>
+<p>Some hints:</p>
+<ul>
+<li>There are four arguments to <code>line()</code> only one of them has actually changed.</li>
+<li>It will need to increase by an amount that <em>increases</em> for each loop e.g.<ul>
+<li>If it were 10 on the first loop</li>
+<li>It would be 15 on the second loop (difference of 5)</li>
+<li>And then 22 on the third loop (difference of 7)</li>
+</ul>
+</li>
+<li>To achieve this try multiplying the number instead of adding to it (start at 2 and work from there)</li>
+</ul>
+<h2 id="kinking-the-lines">Kinking the lines</h2>
+<p>Now add a kink to the lines to achieve this:</p>
+<p><img alt="" src="file:///Volumes/Data/Users/arthurc/Sites/alphabetacoders.com/worksheets/week6/images/lines3.png" /></p>
+<p>You actually achieve this by drawing a second line, but what should the arguments be?</p>
+<h2 id="making-the-lines-your-own">Making the lines your own</h2>
+<p>Now alter the sketch, and use the <a href="http://processingjs.org/reference/">processing reference</a> to make this sketch <em>your own</em>. </p>
+<p>Some ideas:</p>
+<ul>
+<li>Lines be different colours (a gradient would be easy to achieve)</li>
+<li>Lines connected to your mouse position</li>
+<li>Lines change colours when you move the mouse over them</li>
+<li>Different thicknesses of lines</li>
+</ul>
+<h3 id="other-students-examples">Other student's examples:</h3>
+<h4 id="naail-mouse-changes-colour">Naail - Mouse changes colour</h4>
+<iframe id='ifr' width='480' height='515' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9mwwbtBM2n2eja/rev.463?autostart=0'></iframe>
+
+<h4 id="g-man-lines-follow-mouse">G-Man - Lines follow mouse</h4>
+<iframe id='ifr' width='480' height='335' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9f6GiaNfwM2FEh/rev.163?autostart=0'></iframe>
+
+<h4 id="eesa-pseudo-shadows">Eesa - Pseudo Shadows</h4>
+<iframe id='ifr' width='580' height='515' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9nWX-TvIM3r8N6/rev.408?autostart=0'></iframe></body></html>
