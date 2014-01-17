@@ -83,3 +83,75 @@ Some ideas:
 #### Eesa - Pseudo Shadows
 
 <iframe id='ifr' width='580' height='515' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9nWX-TvIM3r8N6/rev.408?autostart=0'></iframe>
+
+## Loops inside loops
+
+Last week we looked at `for` loops, where a block of code could be repeated as many times as we would like. Now we are going to create a `for` loop, which loops another `for` loop. This can be very useful for drawing grids of things.
+
+    void setup() {
+        size(480, 480);
+        smooth();
+        noStroke();
+    }
+
+    void draw() {
+        background(0);
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                fill(255, 140);
+                ellipse(j * 40, i * 40, 40, 40); 
+            }
+        }
+    }
+
+### Grids
+
+In the previous example we are using the counters `i` and `j` that go from `0` to `9`, incrementing by `1` per loop (so they go `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`, notice that they don't get to `10` because the **condition** for our loop is `i < 10`. The loop will repeat as long as this statement is true, but `10 < 10` is a false statement so it won't run then.
+
+We then use these counter to calculate the `x` and `y` arguments of `ellipse`: `i * 40` and `j * 40`.
+
+An alternative way to do this is to just use the values we want as our counters e.g.
+
+    for (int x = 0; x < 400; x += 40) {
+        for (int y = 0; y < 400; y += 40) {
+            fill(255, 140);
+            ellipse(x, y, 40, 40); 
+        }
+    }
+
+Notice here I've changed the counter variable names to x and y, as this makes it more comprehendible.
+
+## Pins and Lines
+
+Here's another example of a grid loop
+
+    void setup() {
+        size(480, 480);
+        smooth();
+    }
+
+    void draw() {
+        background(0);
+        fill(255, 255, 255, 255);
+        stroke(102, 102, 102, 255);
+
+        for (int y = 20; y <= height - 20; y += 10) {
+            for (int x = 20; x <= width - 20; x += 10) {
+                ellipse(x, y, 4, 4);
+                // Draw a line to the center of the display
+                line(x, y, height / 2, width / 2);
+            }
+        }
+    }
+
+### Task: Make it your own
+
+Edit the previous sketch to make it your own, you could:
+    + Change the colours of the `ellipse`s or `line``
+    + Make the lines follow the mouse using `mousex`
+
+### Examples of student's work
+
+#### Danny
+
+<iframe id='ifr' width='720' height='515' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9kzT6OT2k2fF2R/rev.464?autostart=0'></iframe>

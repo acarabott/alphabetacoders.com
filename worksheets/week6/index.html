@@ -185,4 +185,63 @@ void draw() {
 <iframe id='ifr' width='480' height='335' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9f6GiaNfwM2FEh/rev.163?autostart=0'></iframe>
 
 <h4 id="eesa-pseudo-shadows">Eesa - Pseudo Shadows</h4>
-<iframe id='ifr' width='580' height='515' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9nWX-TvIM3r8N6/rev.408?autostart=0'></iframe></body></html>
+<iframe id='ifr' width='580' height='515' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9nWX-TvIM3r8N6/rev.408?autostart=0'></iframe>
+
+<h2 id="loops-inside-loops">Loops inside loops</h2>
+<p>Last week we looked at <code>for</code> loops, where a block of code could be repeated as many times as we would like. Now we are going to create a <code>for</code> loop, which loops another <code>for</code> loop. This can be very useful for drawing grids of things.</p>
+<pre><code>void setup() {
+    size(480, 480);
+    smooth();
+    noStroke();
+}
+
+void draw() {
+    background(0);
+    for (int i = 0; i &lt; 10; i++) {
+        for (int j = 0; j &lt; 10; j++) {
+            fill(255, 140);
+            ellipse(j * 40, i * 40, 40, 40); 
+        }
+    }
+}
+</code></pre>
+<h3 id="grids">Grids</h3>
+<p>In the previous example we are using the counters <code>i</code> and <code>j</code> that go from <code>0</code> to <code>9</code>, incrementing by <code>1</code> per loop (so they go <code>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</code>, notice that they don't get to <code>10</code> because the <strong>condition</strong> for our loop is <code>i &lt; 10</code>. The loop will repeat as long as this statement is true, but <code>10 &lt; 10</code> is a false statement so it won't run then.</p>
+<p>We then use these counter to calculate the <code>x</code> and <code>y</code> arguments of <code>ellipse</code>: <code>i * 40</code> and <code>j * 40</code>.</p>
+<p>An alternative way to do this is to just use the values we want as our counters e.g.</p>
+<pre><code>for (int x = 0; x &lt; 400; x += 40) {
+    for (int y = 0; y &lt; 400; y += 40) {
+        fill(255, 140);
+        ellipse(x, y, 40, 40); 
+    }
+}
+</code></pre>
+<p>Notice here I've changed the counter variable names to x and y, as this makes it more comprehendible.</p>
+<h2 id="pins-and-lines">Pins and Lines</h2>
+<p>Here's another example of a grid loop</p>
+<pre><code>void setup() {
+    size(480, 480);
+    smooth();
+}
+
+void draw() {
+    background(0);
+    fill(255, 255, 255, 255);
+    stroke(102, 102, 102, 255);
+
+    for (int y = 20; y &lt;= height - 20; y += 10) {
+        for (int x = 20; x &lt;= width - 20; x += 10) {
+            ellipse(x, y, 4, 4);
+            // Draw a line to the center of the display
+            line(x, y, height / 2, width / 2);
+        }
+    }
+}
+</code></pre>
+<h3 id="task-make-it-your-own">Task: Make it your own</h3>
+<p>Edit the previous sketch to make it your own, you could:
+    + Change the colours of the <code>ellipse</code>s or <code>line``
+    + Make the lines follow the mouse using</code>mousex`</p>
+<h3 id="examples-of-students-work">Examples of student's work</h3>
+<h4 id="danny">Danny</h4>
+<iframe id='ifr' width='720' height='515' scrolling='no' style='background: url(http://clsb.processingtogether.com/static/img/jun09/pad/connectingbar.gif) no-repeat center 60px;' src='http://clsb.processingtogether.com/sp/pad/iframe/ro.9kzT6OT2k2fF2R/rev.464?autostart=0'></iframe></body></html>
