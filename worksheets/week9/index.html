@@ -1,0 +1,209 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>week9</title></head><body><h1 id="processing-week-9">Processing - Week 9</h1>
+<h2 id="easing">Easing</h2>
+<p>When easing is applied to a moving object it means that rather than moving directly to a location, it <em>eases</em> into that position, it lags behind the instruction, creating a more fluid motion.</p>
+<p>Here's an example</p>
+<pre><code>float x;
+float easing = 0.01;
+
+void setup() {
+    size(480, 480);
+    smooth();  
+}
+
+void draw() {
+    float targetX = mouseX;
+    x += (targetX - x) * easing;
+    ellipse(x, 40, 12, 12);
+    println(targetX + " : " + x);
+}
+</code></pre>
+<p>Notice how the circle doesn't follow the mouse exactly, and slows down as it gets closer to it. Also notice that it never actually reaches the targetX, but gets so close that it doesn't really matter.</p>
+<h3 id="understanding-easing">Understanding easing</h3>
+<p>To understand this, lets write out the results of a few animation frames, using simple numbers.</p>
+<p>Let's take these starting values</p>
+<pre><code>x = 0;
+targetX = 10;
+</code></pre>
+<p>The line that determines our x position is</p>
+<pre><code>x += (targetX - x) * easing;
+</code></pre>
+<p>So let's translate that</p>
+<h4 id="animation-frame-1">Animation Frame 1</h4>
+<pre><code>x = 0 + ((10 - 0) * 0.01);
+x = 0 + (10 * 0.01)
+x = 0 + 0.1
+x = 0.1
+</code></pre>
+<h4 id="animation-frame-2">Animation Frame 2</h4>
+<pre><code>// x is now 0.1
+// targetX still 10
+
+x = 0.1 + ((10 - 0.1) * 0.01);
+x = 0.1 + (9.9 * 0.01)
+x = 0.1 + 0.099
+x = 0.199
+</code></pre>
+<h4 id="animation-frame-3">Animation Frame 3</h4>
+<pre><code>x = 0.199 + ((10 - 0.199) * 0.01);
+x = 0.199 + (9.801 * 0.01)
+x = 0.199 + 0.09801
+x = 0.29701
+</code></pre>
+<p>As you can see, the x value is getting closer to the target of 10, but at a slower and slower rate. The first frame it moves by 0.1, the second by 0.99, the third by 0.09801.</p>
+<h3 id="adjust-the-easing">Adjust the Easing</h3>
+<p>Change the <code>easing</code> variable to see how this affects the movement of the circle. At what value will it make no difference?</p>
+<h2 id="smooth-lines">Smooth Lines</h2>
+<p>Let's apply easing to our previous line drawing sketch</p>
+<pre><code>float x;
+float y;
+float px;
+float py;
+float easing = 0.05;
+
+void setup() {
+    size(480, 480);
+    smooth();
+    stroke(0, 102);
+}
+
+void draw() {
+    float targetX = mouseX;
+    x += (targetX - x) * easing;
+    float targetY = mouseY;
+    y += (targetY - y) * easing;
+    float weight = dist(x, y, px, py);
+    strokeWeight(weight);
+    line(x, y, px, py);
+    py = y;
+    px = x;
+}
+</code></pre>
+<h3 id="make-it-your-own">Make it your own</h3>
+<p>Ideas:</p>
+<ul>
+<li>Multiple lines</li>
+<li>Varying colours</li>
+<li>Easing based on target position</li>
+</ul></body></html>
