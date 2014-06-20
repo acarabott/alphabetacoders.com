@@ -77,7 +77,7 @@ Arguments: *(x1, y1, x2, y2, x3, y3, x4, y4)*
 
 The x and y positions of each corner of the quad
 
-    quad(20, 20, 460, 20, 460, 460, 460, 20);
+    quad(20, 20, 460, 20, 460, 460, 20, 360);
 
 ![quad](/worksheets/01/images/quad.png)
 
