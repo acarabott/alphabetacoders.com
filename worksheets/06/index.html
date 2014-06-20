@@ -63,13 +63,13 @@ border-left: 0.5em #EEE solid;
 hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
 
 
-pre , code, kbd, samp { 
-  color: #000; 
-  font-family: monospace; 
-  font-size: 0.88em; 
+pre , code, kbd, samp {
+  color: #000;
+  font-family: monospace;
+  font-size: 0.88em;
   border-radius:3px;
   background-color: #F8F8F8;
-  border: 1px solid #CCC; 
+  border: 1px solid #CCC;
 }
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
 pre code { border: 0px !important; padding: 0;}
@@ -149,10 +149,10 @@ void draw() {
 <li>The y2 value stays constant at <code>80</code>, so 40 pixels lower than where the line started</li>
 </ul>
 <p>So we get this</p>
-<p><img alt="" src="/worksheets/week6/images/lines1.png" /></p>
+<p><img alt="" src="/worksheets/06/images/lines1.png" /></p>
 <h2 id="fanning-the-lines">Fanning the lines</h2>
 <p>Now your goal is to fan the lines out, so they aren't all parallel, like this:</p>
-<p><img alt="" src="/worksheets/week6/images/lines2.png" /></p>
+<p><img alt="" src="/worksheets/06/images/lines2.png" /></p>
 <p>Some hints:</p>
 <ul>
 <li>There are four arguments to <code>line()</code> only one of them has actually changed.</li>
@@ -166,7 +166,7 @@ void draw() {
 </ul>
 <h2 id="kinking-the-lines">Kinking the lines</h2>
 <p>Now add a kink to the lines to achieve this:</p>
-<p><img alt="" src="/worksheets/week6/images/lines3.png" /></p>
+<p><img alt="" src="/worksheets/06/images/lines3.png" /></p>
 <p>You actually achieve this by drawing a second line, but what should the arguments be?</p>
 <h2 id="making-the-lines-your-own">Making the lines your own</h2>
 <p>Now alter the sketch, and use the <a href="http://processingjs.org/reference/">processing reference</a> to make this sketch <em>your own</em>. </p>
@@ -200,7 +200,7 @@ void draw() {
     for (int i = 0; i &lt; 10; i++) {
         for (int j = 0; j &lt; 10; j++) {
             fill(255, 140);
-            ellipse(j * 40, i * 40, 40, 40); 
+            ellipse(j * 40, i * 40, 40, 40);
         }
     }
 }
@@ -212,7 +212,7 @@ void draw() {
 <pre><code>for (int x = 0; x &lt; 400; x += 40) {
     for (int y = 0; y &lt; 400; y += 40) {
         fill(255, 140);
-        ellipse(x, y, 40, 40); 
+        ellipse(x, y, 40, 40);
     }
 }
 </code></pre>

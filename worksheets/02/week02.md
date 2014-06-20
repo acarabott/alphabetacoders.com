@@ -2,7 +2,7 @@
 
 ## Task: Make a pizza slice
 
-![Pizza](/worksheets/week2/images/pizza.png)
+![Pizza](/worksheets/02/images/pizza.png)
 
 Using the `arc` function, draw a slice of pizza
 
@@ -15,11 +15,11 @@ e.g.
 	arc(240, 240, 100, 100, HALF_PI, PI + HALF_PI);
 
 Instead of using radians, you can use the `radians` function which will convert a value in degrees (0-360) into radians, e.g.
-	
-	// this is the same value as PI
-	radians(180); 	
 
-![Radians](/worksheets/week1/images/radians.png)
+	// this is the same value as PI
+	radians(180);
+
+![Radians](/worksheets/01/images/radians.png)
 
 
 ### Colour
@@ -46,7 +46,7 @@ A free online one: [http://www.colorpicker.com/](http://www.colorpicker.com/)
 
 ### Pepperoni
 
-Add some red slices of pepperoni to your pizza using the `ellipse` command (don't remember it? look it up in the [Week 1 Worksheet](/worksheets/week1/)) or the [Processing Reference](http://processing.org/reference/)
+Add some red slices of pepperoni to your pizza using the `ellipse` command (don't remember it? look it up in the [Week 1 Worksheet](/worksheets/01/)) or the [Processing Reference](http://processing.org/reference/)
 
 Your pizza should remain yellow, but your pepperoni slices should be red. The order of your functions is very important!
 

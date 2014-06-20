@@ -75,28 +75,28 @@ Ideas
 
 Here's an example of a more involved drawing
 
-![Robot](/worksheets/week5/images/robot.png)	
+![Robot](/worksheets/05/images/robot.png)
 
-	void setup() {  // this is run once.   
+	void setup() {  // this is run once.
 	    size(720, 480);
 	    smooth();
 	    strokeWeight(2);
 	    ellipseMode(RADIUS);
-	} 
-	 
-	void draw() {  // this is run repeatedly.  
-	    
+	}
+
+	void draw() {  // this is run repeatedly.
+
 	    // Neck
 	    stroke(102);                    // Set stroke to gray
 	    line(266, 257, 266, 162);        // Left
 	    line(276, 257, 276, 162);       // Middle
 	    line(286, 257, 286, 162);       // Right
-	    
+
 	    // Antennae
 	    line(276, 155, 246, 112);
 	    line(276, 155, 306, 56);
 	    line(276, 155, 342, 170);
-	    
+
 	    // Body
 	    noStroke();
 	    fill(102);
@@ -105,7 +105,7 @@ Here's an example of a more involved drawing
 	    rect(219, 257, 90, 120);
 	    fill(102);
 	    rect(219, 274, 90, 6);
-	    
+
 	    // Head
 	    fill(0);
 	    ellipse(276, 155, 45, 45);

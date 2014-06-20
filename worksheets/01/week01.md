@@ -6,7 +6,7 @@
 In the editor, type the following:
 
     ellipse(50, 50, 80, 80);
-    
+
 ### Tasks:
 
 * Alter the values and watch it change, what does each parameter do?
@@ -19,12 +19,12 @@ Delete the text from the last example, and try this one:
         size(480, 120);
         smooth();
     }
-    
+
     void draw() {
         if (mousePressed) {
             fill(0);
         } else {
-            fill(255); 
+            fill(255);
         }
         ellipse(mouseX, mouseY, 80, 80);
     }
@@ -59,7 +59,7 @@ The x and y position of the two ends of the line
 
     line(20, 50, 400, 400);
 
-![line](/worksheets/week1/images/line.png)
+![line](/worksheets/01/images/line.png)
 
 ### Triangle
 
@@ -69,7 +69,7 @@ The x and y positions of each of the triangle's points
 
     triangle(240, 0, 0, 240, 240, 240);
 
-![triangle](/worksheets/week1/images/triangle.png)
+![triangle](/worksheets/01/images/triangle.png)
 
 ### Quad
 
@@ -79,15 +79,15 @@ The x and y positions of each corner of the quad
 
     quad(20, 20, 460, 20, 460, 460, 460, 20);
 
-![quad](/worksheets/week1/images/quad.png)
+![quad](/worksheets/01/images/quad.png)
 
 ### Rect
 
-Arguments: *(x, y, width, height)*    
+Arguments: *(x, y, width, height)*
 
     rect(20, 20, 440, 440);
 
-![rect](/worksheets/week1/images/rect.png)
+![rect](/worksheets/01/images/rect.png)
 
 ### Ellipse
 
@@ -95,12 +95,12 @@ Arguments: *(x, y, width, height)*
 
     ellipse(240, 240, 100, 100);
 
-![ellipse](/worksheets/week1/images/ellipse.png)
+![ellipse](/worksheets/01/images/ellipse.png)
 
 ### Arc
 
 Arguments: *(x, y, width, height, start, stop)*
-    
+
     arc(240, 240, 100, 100, HALF_PI, PI + HALF_PI);
 
 *Start and Stop* are the degrees in *Radians* (angle measurements based on pi (3.14159) rather than degrees). Processing comes with some constant values (words that are all uppercase) to make life easier.
@@ -115,7 +115,7 @@ If you think of it like a clock:
 
 These constants are just numbers, so you can do PI * 2, or HALF_PI / 2
 
-![Radians](/worksheets/week1/images/radians.png)
+![Radians](/worksheets/01/images/radians.png)
 
 ## Play time
 

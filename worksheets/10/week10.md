@@ -9,17 +9,17 @@
     map(valueToMap, inputMin, inputMax, outputMin, outputMax)
 
 so our `mouseX` colour example would look like
-    
+
     map(mouseX, 0, width, 0, 255)
 
 ## Ellipse Buddies
 
 Lets start with a basic mouse following `ellipse` but with the fill colour mapped to our `mouseX`
 
-    void setup() {  // this is run once.   
-        size(500, 500);    
-    } 
-     
+    void setup() {  // this is run once.
+        size(500, 500);
+    }
+
     void draw() {
         background(0);
         noStroke();
@@ -33,7 +33,7 @@ Now lets add a second ellipse, with its `x` position mapped to our `mouseY`, it 
         background(0);
         noStroke();
         fill(map(mouseX, 0, width, 0, 255));
-        
+
         ellipse(mouseX, mouseY, 20, 20);
         float x2 = map(mouseY, 0, height, mouseX, mouseX - (width / 2));
         ellipse(x2, mouseY, 20, 20);
@@ -41,12 +41,12 @@ Now lets add a second ellipse, with its `x` position mapped to our `mouseY`, it 
 
 ### Task: Many Buddies
 
-Have your sketch draw an arbitray number of ellipses (use an `int num` variable so that you can quickly alter it on the fly). 
+Have your sketch draw an arbitray number of ellipses (use an `int num` variable so that you can quickly alter it on the fly).
 
 When your mouse is at the top of the screen they should all be on top of each other.
 When your mouse is at the bottom of the screen, in the middle, they should all be fanned out from the left to right
 
-![](/worksheets/week10/images/fan.png)
+![](/worksheets/10/images/fan.png)
 
 #### Make it your own
 

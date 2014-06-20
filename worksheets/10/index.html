@@ -63,13 +63,13 @@ border-left: 0.5em #EEE solid;
 hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
 
 
-pre , code, kbd, samp { 
-  color: #000; 
-  font-family: monospace; 
-  font-size: 0.88em; 
+pre , code, kbd, samp {
+  color: #000;
+  font-family: monospace;
+  font-size: 0.88em;
   border-radius:3px;
   background-color: #F8F8F8;
-  border: 1px solid #CCC; 
+  border: 1px solid #CCC;
 }
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
 pre code { border: 0px !important; padding: 0;}
@@ -120,7 +120,7 @@ body{font-size:16px;}
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-</style><title>week10</title></head><body><h1 id="processing-week-10">Processing - Week 10</h1>
+</style><title>10</title></head><body><h1 id="processing-week-10">Processing - Week 10</h1>
 <h2 id="mapping-values">Mapping values</h2>
 <p><code>map</code> is a really useful function that lets us map one range of values to another, e.g. convert the <code>mouseX</code> position (<code>0 - width</code>) to a colour range (<code>0-255</code>).</p>
 <p><code>map</code> takes 5 arguments:</p>
@@ -131,8 +131,8 @@ body{font-size:16px;}
 </code></pre>
 <h2 id="ellipse-buddies">Ellipse Buddies</h2>
 <p>Lets start with a basic mouse following <code>ellipse</code> but with the fill colour mapped to our <code>mouseX</code></p>
-<pre><code>void setup() {  // this is run once.   
-    size(500, 500);    
+<pre><code>void setup() {  // this is run once.
+    size(500, 500);
 }
 
 void draw() {
@@ -157,7 +157,7 @@ void draw() {
 <p>Have your sketch draw an arbitray number of ellipses (use an <code>int num</code> variable so that you can quickly alter it on the fly). </p>
 <p>When your mouse is at the top of the screen they should all be on top of each other.
 When your mouse is at the bottom of the screen, in the middle, they should all be fanned out from the left to right</p>
-<p><img alt="" src="/worksheets/week10/images/fan.png" /></p>
+<p><img alt="" src="/worksheets/10/images/fan.png" /></p>
 <h4 id="make-it-your-own">Make it your own</h4>
 <p>Add another use of <code>map</code> to your sketch, you could create a gradient of colours across your <code>ellipse</code>s, have the number of <code>ellipse</code>s depend on the mouse position etc...</p>
 <h4 id="students-work">Student's work</h4>

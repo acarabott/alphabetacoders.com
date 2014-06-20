@@ -63,13 +63,13 @@ border-left: 0.5em #EEE solid;
 hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
 
 
-pre , code, kbd, samp { 
-  color: #000; 
-  font-family: monospace; 
-  font-size: 0.88em; 
+pre , code, kbd, samp {
+  color: #000;
+  font-family: monospace;
+  font-size: 0.88em;
   border-radius:3px;
   background-color: #F8F8F8;
-  border: 1px solid #CCC; 
+  border: 1px solid #CCC;
 }
 pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
 pre code { border: 0px !important; padding: 0;}
@@ -122,7 +122,7 @@ body{font-size:16px;}
 }
 </style><title>week2</title></head><body><h1 id="processing-week-2">Processing - Week 2</h1>
 <h2 id="task-make-a-pizza-slice">Task: Make a pizza slice</h2>
-<p><img alt="Pizza" src="/worksheets/week2/images/pizza.png" /></p>
+<p><img alt="Pizza" src="/worksheets/02/images/pizza.png" /></p>
 <p>Using the <code>arc</code> function, draw a slice of pizza</p>
 <p>Here's a reminder of the <code>arc</code> function and a diagram showing useful values for start and stop, which are in <em>radians</em></p>
 <pre><code>arc(x, y, width, height, start, stop);
@@ -134,7 +134,7 @@ body{font-size:16px;}
 <pre><code>// this is the same value as PI
 radians(180);
 </code></pre>
-<p><img alt="Radians" src="/worksheets/week1/images/radians.png" /></p>
+<p><img alt="Radians" src="/worksheets/01/images/radians.png" /></p>
 <h3 id="colour">Colour</h3>
 <p>Make your pizza slice yellow, by using the <code>fill</code> function before your <code>arc</code> function.</p>
 <p><code>fill</code> has three parameters: <em>(red, green, blue)</em> which are values from 0-255. Try these examples to understand how these values work, then set your pizza slice to yellow.</p>
@@ -153,7 +153,7 @@ fill(160, 0, 130);
 <p>You can also use a colour picker to find the right values, which is visual way of finding the colour you want</p>
 <p>A free online one: <a href="http://www.colorpicker.com/">http://www.colorpicker.com/</a></p>
 <h3 id="pepperoni">Pepperoni</h3>
-<p>Add some red slices of pepperoni to your pizza using the <code>ellipse</code> command (don't remember it? look it up in the <a href="/worksheets/week1/">Week 1 Worksheet</a>) or the <a href="http://processing.org/reference/">Processing Reference</a></p>
+<p>Add some red slices of pepperoni to your pizza using the <code>ellipse</code> command (don't remember it? look it up in the <a href="/worksheets/01/">Week 1 Worksheet</a>) or the <a href="http://processing.org/reference/">Processing Reference</a></p>
 <p>Your pizza should remain yellow, but your pepperoni slices should be red. The order of your functions is very important!</p>
 <h3 id="crust">Crust</h3>
 <p>Let's add a crust to our pizza using the <code>strokeWeight</code> function, which adds a border to shapes. This needs to go BEFORE we call our <code>arc</code> function, otherwise it will have no effect.</p>

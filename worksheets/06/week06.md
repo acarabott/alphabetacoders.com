@@ -15,7 +15,7 @@ Let's revisit `for` loops, this time to draw sets of lines.
 		}
 	}
 
-### This loop 
+### This loop
 
 - Uses a counter that starts at 20 `int i = 20;`
 - Continues as long as the counter is under 400 `i < 400;`
@@ -34,13 +34,13 @@ So we get this
 
 
 
-![](/worksheets/week6/images/lines1.png)
+![](/worksheets/06/images/lines1.png)
 
 ## Fanning the lines
 
 Now your goal is to fan the lines out, so they aren't all parallel, like this:
 
-![](/worksheets/week6/images/lines2.png)
+![](/worksheets/06/images/lines2.png)
 
 Some hints:
 
@@ -55,13 +55,13 @@ Some hints:
 
 Now add a kink to the lines to achieve this:
 
-![](/worksheets/week6/images/lines3.png)
+![](/worksheets/06/images/lines3.png)
 
 You actually achieve this by drawing a second line, but what should the arguments be?
 
 ## Making the lines your own
 
-Now alter the sketch, and use the [processing reference](http://processingjs.org/reference/) to make this sketch *your own*. 
+Now alter the sketch, and use the [processing reference](http://processingjs.org/reference/) to make this sketch *your own*.
 
 Some ideas:
 
@@ -99,7 +99,7 @@ Last week we looked at `for` loops, where a block of code could be repeated as m
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 fill(255, 140);
-                ellipse(j * 40, i * 40, 40, 40); 
+                ellipse(j * 40, i * 40, 40, 40);
             }
         }
     }
@@ -115,7 +115,7 @@ An alternative way to do this is to just use the values we want as our counters 
     for (int x = 0; x < 400; x += 40) {
         for (int y = 0; y < 400; y += 40) {
             fill(255, 140);
-            ellipse(x, y, 40, 40); 
+            ellipse(x, y, 40, 40);
         }
     }
 
